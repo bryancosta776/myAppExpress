@@ -4,6 +4,8 @@ const router = express.Router();
 
 router.use(express.json());
 
-const user = require('../controller/routes')
+const user = require('./usersRoutes')
 
-module.exports = user
+router.use(user)
+
+module.exports = router
